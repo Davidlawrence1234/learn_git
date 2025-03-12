@@ -1,0 +1,159 @@
+$ cd learn_git
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git
+$ git add. third.txt
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git
+$ touch third.txt
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git
+$ ls
+third.txt
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git
+$ git init
+Initialized empty Git repository in C:/Users/DELL 7420/learn_git/.git/
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git add learn.txt
+fatal: pathspec 'learn.txt' did not match any files
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git add third.txt
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git commit -m "adding third.txt"
+[main (root-commit) 6531948] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git commit -m "third.txt"
+On branch main
+nothing to commit, working tree clean
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git log
+commit 653194860bd1b5a7f8f0ee97760029aebcdbe0de (HEAD -> main)
+Author: unknown <lawrencedavidd1234@gmail.com>
+Date:   Wed Mar 12 16:01:21 2025 +0100
+
+    adding third.txt
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ touch fourth.txt
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git add fourth.txt
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git commit -m "fourth.txt"
+[main 5b33dd8] fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git rm third.txt
+rm 'third.txt'
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git add third.txt
+fatal: pathspec 'third.txt' did not match any files
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ touch third.txt
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git add third.txt
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git commit -m "third.txt"
+On branch main
+nothing to commit, working tree clean
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git rm --cached [third_txt]
+fatal: pathspec '[third_txt]' did not match any files
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git rm --cached [third.txt]
+fatal: pathspec '[third.txt]' did not match any files
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git rm --cached third.txt
+rm 'third.txt'
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git add .
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git commit -m "remove third.txt"
+On branch main
+nothing to commit, working tree clean
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git log
+commit 5b33dd804e2a013c01b829553961c9dbd9533004 (HEAD -> main)
+Author: unknown <lawrencedavidd1234@gmail.com>
+Date:   Wed Mar 12 16:10:16 2025 +0100
+
+    fourth.txt
+
+commit 653194860bd1b5a7f8f0ee97760029aebcdbe0de
+Author: unknown <lawrencedavidd1234@gmail.com>
+Date:   Wed Mar 12 16:01:21 2025 +0100
+
+    adding third.txt
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git config --global --get core.pager
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git config --global
+error: no action specified
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git config --global --list
+user.email=lawrencedavidd1234@gmail.com
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$ git config --list --show-origin
+file:C:/Program Files/Git/etc/gitconfig diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig http.sslbackend=schannel
+file:C:/Program Files/Git/etc/gitconfig core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig init.defaultbranch=main
+file:C:/Users/DELL 7420/.gitconfig      user.email=lawrencedavidd1234@gmail.com
+file:.git/config        core.repositoryformatversion=0
+file:.git/config        core.filemode=false
+file:.git/config        core.bare=false
+file:.git/config        core.logallrefupdates=true
+file:.git/config        core.symlinks=false
+file:.git/config        core.ignorecase=true
+
+DELL 7420@DESKTOP-ATIBHHB MINGW64 ~/learn_git (main)
+$
